@@ -1,0 +1,35 @@
+// Grid
+$xs-size: 0;
+$sm-size: 640px;
+$md-size: 840px;
+$lg-size: 1000px;
+$xl-size: 1400px;
+$sm: "all and (min-width: #{$sm-size})";
+$md: "all and (min-width: #{$md-size})";
+$lg: "all and (min-width: #{$lg-size})";
+$xl: "all and (min-width: #{$xl-size})";
+$grid-breakpoints: ( xs: $xs-size, sm: $sm-size, md: $md-size, lg: $lg-size, xl: $xl-size);
+$container-max-widths: ( sm: 610px, md: 810px, lg: 970px, xl: 1310px);
+// Colors
+$primary: #000;
+$secondary: #750202;
+$light: #808080;
+$dark: #222;
+// Links
+// $link-color:  theme-color("primary") !default;
+// $link-decoration: none !default;
+$link-hover-color: inherit;
+$link-hover-decoration: none;
+$emphasized-link-hover-darken-percentage: 0;
+// Fonts
+$font-family-base: 'Open Sans',
+sans-serif;
+$dinot: 'DINOT';
+// Border
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+// Spacer
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3.5), 6: ($spacer * 4), 7: ($spacer * 4.5), 8: ($spacer * 5), 9: ($spacer * 5.5), 10: ($spacer * 6)), $spacers);

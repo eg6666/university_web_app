@@ -1,0 +1,104 @@
+body {
+    color: #000;
+    @include media-breakpoint-down(md) {
+        font-size: 14px;
+    }
+}
+
+.content {
+    padding-top: 0px;
+    margin-bottom: 30px;
+    @media #{$lg} {
+        padding-top: 0px;
+        margin-bottom: 80px;
+    }
+}
+
+.container-small {
+    @extend .container;
+    @media #{$xl} {
+        max-width: 1060px;
+    }
+}
+
+.remove-content-mb {
+    margin-bottom: -30px;
+    @media #{$lg} {
+        margin-bottom: -80px;
+    }
+}
+
+.lead-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8;
+    @media #{$lg} {
+        padding-top: 60px;
+        padding-bottom: 75px;
+        font-size: 20px;
+    }
+    // ie11 fix
+    &>* {
+        width: 100%;
+    }
+}
+
+.section-default {
+    @include padding(30px null);
+    @media #{$lg} {
+        @include padding(80px null);
+    }
+    // Open Sans fix
+    &>h1,
+    &>h2,
+    &>h3,
+    &>.container>h1,
+    &>.container>h2,
+    &>.container>h3 {
+        margin-top: -.25em;
+        @media #{$lg} {
+            margin-top: -.4em;
+        }
+    }
+}
+
+.related {
+    margin-top: 30px;
+    @media #{$lg} {
+        margin-top: 60px;
+    }
+    &__content {
+        background-color: #fbf8ef;
+        @include padding(25px null);
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    &__list {}
+    &__item {
+        margin-left: 1em;
+        text-indent: -1.3em;
+        &::before {
+            content: "・";
+            font-size: 18px;
+            font-weight: bold;
+        }
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    &__link {
+        display: inline;
+        font-size: 16px;
+        font-weight: bold;
+        @media #{$md} {
+            font-size: 18px;
+        }
+    }
+}

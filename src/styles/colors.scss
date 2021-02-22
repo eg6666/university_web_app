@@ -1,0 +1,51 @@
+// Colors
+$colors: ( black: #000, yellow: #fbf8ef, blue: #5a8ea4, lightgray: #eee, green: #9cb528, darkgreen: #169054, red: #c1767d, brown: #bba084, orange: #c48602, pink: #ba79b0, cyan: #24a7a2, gray: #a7a7a7, dark: #222, secondary: $secondary);
+@mixin background-modifiers {
+    @each $name,
+    $hex in $colors {
+        &#{""+$name} {
+            background: $hex;
+        }
+    }
+}
+
+@mixin color-modifiers {
+    @each $name,
+    $hex in $colors {
+        &#{""+$name} {
+            color: $hex;
+        }
+    }
+}
+
+@mixin hover-color-modifiers {
+    @each $name,
+    $hex in $colors {
+        &#{""+$name} {
+            &:hover {
+                color: $hex;
+            }
+        }
+    }
+}
+
+// Background
+.bg- {
+    @include background-modifiers;
+}
+
+// Text
+.text- {
+    @include color-modifiers;
+}
+
+@media #{$lg} {
+    .lg\:text- {
+        @include color-modifiers;
+    }
+}
+
+// Hover 
+.hover\:text- {
+    @include hover-color-modifiers;
+}
