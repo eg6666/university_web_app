@@ -6,12 +6,12 @@
     </div>
     <div class="container">
       <div class="about-history__content text-base">
-      <div :key="info.title" v-for="info in data.info">
-          <h3 class="about-history__subttl">{{info.title }}</h3>
+        <div :key="info.title" v-for="info in data.info">
+          <h3 class="about-history__subttl">{{ info.title }}</h3>
           <p>{{ info.extract }}</p>
+        </div>
       </div>
-      </div>
-      <EffectButton :data="data.button"/>
+      <EffectButton :data="data.button" />
     </div>
   </section>
 </template>
@@ -24,8 +24,8 @@ export default {
     EffectButton,
   },
   props: {
-    data:Object
-  }
+    data: Object,
+  },
 };
 </script>
 
@@ -41,7 +41,7 @@ export default {
   &__subttl {
     font-size: 30px;
     font-weight: bold;
-    
+
     @media (max-width: $md-size) {
       font-size: 20px;
     }
@@ -75,6 +75,7 @@ export default {
   margin-right: auto;
   margin-left: auto;
 }
+//
 
 @media all and (min-width: 1000px) {
   .about-history__img {
@@ -104,7 +105,8 @@ export default {
   width: 90%;
   @media (max-width: $md-size) {
     font-size: 13px;
-    width:100%;
+    width: 100%;
   }
 }
+//
 </style>
